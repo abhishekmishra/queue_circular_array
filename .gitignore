@@ -1,3 +1,5 @@
+*.swp
+*~
 *.dvi
 *.idx
 *.log

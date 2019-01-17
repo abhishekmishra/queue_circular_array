@@ -7,8 +7,8 @@
 pseudocode provided in pages 74-75 of the book ``Data Structures and Algorithms''
 by Aho et al. (This is my first real {\tt CWEB} program.)
 
-A Queue is a list datastructure where items are inserted at one end |enqueue|,
-and taken out from the other end |dequeue|. It can also be called a FIFO i.e.
+A Queue is a list datastructure where items are inserted at one end (|enqueue|),
+and taken out from the other end (|dequeue|). It can also be called a FIFO i.e.
 ``first-in first-out'' list.
 
 In a linked-list implementation of a queue, we can dequeue by removing the first
@@ -40,7 +40,7 @@ headers, circular array, queue implementation, and test program (optional).
 @<Queue implementation@>@/
 @<Test program@>@/
 
-@ Let's get the headers out of the way first. We include \.{stdio.h} if we want 
+@ Let's get the headers out of the way first. We include \.{stdio.h} if we want
 to run the test. \.{stdlib.h} is always included, as we use malloc to create
 the queue when defining |make_queue|.
 
@@ -58,7 +58,7 @@ the queue when defining |make_queue|.
 circular array. The idea is to use this function to go to the next item in an
 array when traversing (instead of just incrementing the index).
 
-If the index |i| is a multiple of |max_length - 1|, the length of the array, then
+If the index |i| is a multiple of |max_length - 1|, the last index of the array, then
 we start from 0.
 
 @<Circular Array@>=
@@ -67,7 +67,7 @@ long next(long i, long max_length)
 	return ((i + 1) % (max_length - 1));
 }
 
-@ Queue implementation: We define the queue datastructure, and procedures to 
+@ Queue implementation: We define the queue datastructure, and procedures to
 create, and destroy queues and also functions to access the queue.
 
 @<Queue implementation@>=

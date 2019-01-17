@@ -8,6 +8,7 @@ CFLAGS = -g -DTEST_CODE
 MLIB = -lm
 RM = /bin/rm -f
 WFILES = queue_circular_array.w
+PROGRAM = queue_circular_array
 
 #======================================================================
 
@@ -44,7 +45,7 @@ all: $(WFILES:.w=)
 doc: $(WFILES:.w=.dvi)
 
 clean:
-	$(RM) *~ \#~ .\#* *.o *.log *.dvi *.toc core a.out
+	$(RM) *~ \#~ .\#* *.o *.log *.dvi *.toc core queue_circular_array
 
 clobber: clean
 	$(RM) $(WFILES:.w=) $(WFILES:.w=.c) $(WFILES:.w=.tex)

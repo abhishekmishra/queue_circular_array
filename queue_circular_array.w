@@ -1,6 +1,5 @@
-% queue_circular_array: A circular array implementation of a queue.
+% queue_circular_array: A queue implementation by Abhishek Mishra.
 
-\nocon % omit table of contents
 \datethis % print date on listing
 
 @* Queue implementation using a Circular Array.  This is an implementation of the Pascal
@@ -109,7 +108,8 @@ The |make_queue| function one argument |max_length| for the maximum
 possible length of the queue.
 
 To distinguish between a full and an empty queue, we must consider the queue full
-when then |next(next(rear))| is front. If we ever got to the point of the |next(rear)|
+when the |next(next(rear))| is front.
+If we ever got to the point of the |next(rear)|
 being equal to front while filling the queue, then we would not be able to
 distinguish this from an empty queue.
 

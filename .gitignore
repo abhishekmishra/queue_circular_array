@@ -7,4 +7,5 @@
 *.tex
 *.toc
 *.c
+*.pdf
 queue_circular_array

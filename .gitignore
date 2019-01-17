@@ -1,0 +1,8 @@
+*.dvi
+*.idx
+*.log
+*.scn
+*.tex
+*.toc
+*.c
+queue_circular_array

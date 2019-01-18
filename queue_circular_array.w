@@ -108,7 +108,7 @@ The |make_queue| function one argument |max_length| for the maximum
 possible length of the queue.
 
 To distinguish between a full and an empty queue, we must consider the queue full
-when the |next(next(rear))| is front.
+when the |next| of |next| of |rear| is |front|.
 If we ever got to the point of the |next(rear)|
 being equal to front while filling the queue, then we would not be able to
 distinguish this from an empty queue.

@@ -12,7 +12,14 @@ PROGRAM = queue_circular_array
 
 #======================================================================
 
-.SUFFIXES: .tex .dvi .w
+.SUFFIXES: .pdf .tex .dvi .w
+
+.w.pdf:
+	make $*.tex
+	make $*.pdf
+
+.tex.pdf:
+	pdftex $<
 
 .w.tex:
 	cweave $*
@@ -42,10 +49,10 @@ PROGRAM = queue_circular_array
 
 all: $(WFILES:.w=)
 
-doc: $(WFILES:.w=.dvi)
+doc: $(WFILES:.w=.pdf)
 
 clean:
-	$(RM) *~ \#~ .\#* *.o *.log *.dvi *.toc core queue_circular_array
+	$(RM) *~ \#~ .\#* *.o *.log *.dvi *.toc *.pdf core queue_circular_array
 
 clobber: clean
 	$(RM) $(WFILES:.w=) $(WFILES:.w=.c) $(WFILES:.w=.tex)
